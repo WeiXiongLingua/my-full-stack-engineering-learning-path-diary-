@@ -29,3 +29,5 @@ rs.on('error', err => {
 ws.on('error', err => {
     console.error('Write error:', err);
 });
+
+// 200 请求success, 403 ban, 404 , can not find. 

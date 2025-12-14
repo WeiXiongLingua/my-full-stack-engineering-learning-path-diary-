@@ -12,3 +12,5 @@ fs.readFile('./test.txt', (err, data) => {
 let data = fs.readFileSync('./test.txt')
 
 console.log(data.toString())
+
+// js python rust c++
