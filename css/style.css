@@ -1,0 +1,23 @@
+table {
+    border-collapse: collapse;
+    width: 360px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  thead th {
+    background: #d19a0f;
+  }
+  tbody tr:nth-child(even) {
+    background: #162882;
+  }
+  tbody tr:nth-child(odd) {
+      background-color: aqua;
+  }
+  tbody td:hover {
+    background: #f90ef9;
+  }
