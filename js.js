@@ -3,17 +3,20 @@ const fs = require('fs')
 const path = require('path')
 
 const server = http.createServer((req, res) => {
+    
+
+    let root = __dirname + '/page';
     let { pathname } = new URL(req.url, 'http://127.0.0.1');
-    let filePath = __dirname + '/page' + pathname;
+    console.log(req.url);
+    let filePath = root + pathname;
+
     fs.readFile(filePath, (err, data) => {
         if (err) {
-            res.statusCode = 500;
-            res.end('Failed');
-            return;
+            console.log('Failed');
+        } else {
+            res.end(data);
         }
-        res.end(data);
     })
-
 })
 
 server.listen(9000)
