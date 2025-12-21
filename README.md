@@ -4,3 +4,5 @@ OK, I ended up at episode 59 today. Big Improvement.
 
 Right Now, I am at episode 69. 200 is the end, half way there.
 Come on.
+
+Right Now, I am at episode 73. 200 is the end. I am already half way there. Come on.
