@@ -14,5 +14,5 @@ Right Now, I am at episode 102. Half way there. Sehr gut.
 
 Right Now, I am at episode 104. I will land a job in the future.
 
-
+105. Thanks. Danke.
 

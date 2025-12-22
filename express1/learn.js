@@ -3,17 +3,42 @@ const data = require('./learn.json');
 const app = express();
 const path = require('path');
 const { users } = data;
+const fs = require('fs');
 
-app.get('/other', (req, res) => {
-    res.redirect('https://www.baidu.com');
+
+function recordMiddleware(req, res, next) {
+    let { url, ip } = req;
+    fs.appendFileSync(path.resolve(__dirname, './access.log'), `${url}, ${ip}\r\n`);
+    next();
+}
+
+app.use(recordMiddleware);
+app.get('/home', (req, res) => {
+    
+    res.send('Homepage');
+})
+
+app.get('/admin', (req, res) => {
+    res.send('Backend');
+})
+
+app.use((req, res) => {
+    res.status(404).send('<h1>404 Not Found<h1>')
+})
+app.listen(3000, () => {
 
 })
 
-app.get('/js', (req, res) => {
-    const file = path.join(__dirname, 'source.txt');
-    // res.download(file, 'hahha');
-    res.sendFile(file)
-})
+// app.get('/other', (req, res) => {
+//     res.redirect('https://www.baidu.com');
+
+// })
+
+// app.get('/js', (req, res) => {
+//     const file = path.join(__dirname, 'source.txt');
+//     // res.download(file, 'hahha');
+//     res.sendFile(file)
+// })
 // app.get('/:age.html', (req, res) => {
 
 //     let { age } = req.params;
@@ -41,7 +66,6 @@ app.get('/js', (req, res) => {
 //         `)
 // })
 
-app.listen(3000, () => {
-    console.log('running');
-})
-
+// app.listen(3000, () => {
+//     console.log('running');
+// })
