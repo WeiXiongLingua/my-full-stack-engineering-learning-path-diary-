@@ -11,7 +11,8 @@ app.get('/other', (req, res) => {
 
 app.get('/js', (req, res) => {
     const file = path.join(__dirname, 'source.txt');
-    res.download(file, 'hahha');
+    // res.download(file, 'hahha');
+    res.sendFile(file)
 })
 // app.get('/:age.html', (req, res) => {
 

@@ -12,6 +12,7 @@ Right Now, I am at episode 85. 200 is the end. Come on!
 
 Right Now, I am at episode 102. Half way there. Sehr gut.
 
-Right Now, I am at episode 103. I will land a job in the future.
+Right Now, I am at episode 104. I will land a job in the future.
+
 
 
