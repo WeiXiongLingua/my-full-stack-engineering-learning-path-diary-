@@ -1,18 +1,28 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title><%= title %></title>
 </head>
 <body>
-    <form action="http://127.0.0.1:3000/login" method="post">
-        <button>submit</button>
-    </form>
-    <pre>
-        <code style="background-color: black; color: aliceblue;">
-            const a = 1
-        </code>
-    </pre>
+  <h1>欢迎，<%= user.name %>！</h1>
+
+  <% if (user.isAdmin) { %>
+    <p>你是管理员，有超级权限！</p>
+  <% } else { %>
+    <p>你只是普通用户。</p>
+  <% } %>
+
+  <ul>
+    <% friends.forEach(function(friend) { %>
+      <li><%= friend %></li>
+    <% }) %>
+  </ul>
+
+  <!-- 包含公共头部 -->
+  <%- include('partials/header') %>
+
+  <!-- 输出富文本内容（不转义） -->
+  <%- articleContent %>
 </body>
 </html>

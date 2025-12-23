@@ -1,20 +1,76 @@
-const express = require('express');
-const data = require('./learn.json');
-const app = express();
-const path = require('path');
-const { users } = data;
-const fs = require('fs');
-
-app.use(express.static(__dirname + '/public'))
-
-app.get('/home', (req, res) => {
-    res.end('Hello Express');
-})
 
 
-app.listen(3000, () => {
-    console.log("I am running");
-})
+app.get('/', (req, res) => {
+    res.render('index', {
+      title: '我的博客',
+      user: { name: '小明', isAdmin: true },
+      friends: ['小红', '小刚', '小李'],
+      articleContent: '<p><strong>这是一段加粗的富文本</strong></p>'
+    });
+  });
+// const express = require('express');
+// const bodyParser = require('body-parser');
+// const app = express();
+// const path = require('path');
+
+// const fs = require('fs');
+
+// const homeRouter = require('./homerouter.js')
+// const adminRouter = require('./adminrouter.js')
+
+// app.use(homeRouter)
+// app.use(adminRouter)
+// app.listen(3000)
+// app.use(express.static(__dirname + '/public'))
+
+// function antiHotLink(req, res, next) {
+//     const referer = req.headers.referer || ''
+//     const allowList = [
+//         '127.0.0.1:3000'
+//     ]
+
+//     const isAllowed = allowList.some(domain => referer.includes(domain))
+//     if (!isAllowed) {
+//         return res.status(403).send('Forbidden')
+//     }
+//     next()
+// }
+
+
+// app.post('/login', antiHotLink, (req, res) => {
+//     res.send('ok')
+// })
+// // create application/json parser
+// const jsonParser = bodyParser.json()
+
+// // create application/x-www-form-urlencoded parser
+// const urlencodedParser = bodyParser.urlencoded()
+
+
+// app.get('/login', (req, res) => {
+//     res.sendFile(__dirname + '/public/index.html');
+// })
+// app.post('/login', urlencodedParser, (req, res) => {
+//     console.log(req.body);
+//     res.send("Success");
+// })
+
+
+
+
+// app.get('/', (req, res) => {
+//     res.end('Hi')
+// })
+// app.use(express.static(__dirname + '/public'))
+
+// app.get('/home', (req, res) => {
+//     res.end('Hello Express');
+// })
+
+
+// app.listen(3000, () => {
+//     console.log("I am running");
+// })
 // function recordMiddleware(req, res, next) {
 //     let { url, ip } = req;
 //     fs.appendFileSync(path.resolve(__dirname, './access.log'), `${url}, ${ip}\r\n`);
