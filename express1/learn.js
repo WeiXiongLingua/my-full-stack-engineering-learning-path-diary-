@@ -5,9 +5,16 @@ const path = require('path');
 const { users } = data;
 const fs = require('fs');
 
+app.use(express.static(__dirname + '/public'))
+
+app.get('/home', (req, res) => {
+    res.end('Hello Express');
+})
 
 
-
+app.listen(3000, () => {
+    console.log("I am running");
+})
 // function recordMiddleware(req, res, next) {
 //     let { url, ip } = req;
 //     fs.appendFileSync(path.resolve(__dirname, './access.log'), `${url}, ${ip}\r\n`);
