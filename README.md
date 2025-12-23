@@ -16,3 +16,6 @@ Right Now, I am at episode 104. I will land a job in the future.
 
 105. Thanks. Danke.
 
+
+108. Finally. Record Track.
+

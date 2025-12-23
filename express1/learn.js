@@ -6,41 +6,44 @@ const { users } = data;
 const fs = require('fs');
 
 
-function recordMiddleware(req, res, next) {
-    let { url, ip } = req;
-    fs.appendFileSync(path.resolve(__dirname, './access.log'), `${url}, ${ip}\r\n`);
-    next();
-}
-
-let checkCodeMiddleware = (req, res, next) => {
-    if (req.query.code === '521') {
-        next();
-    } else {
-        res.send('Error')
-    }
-}
 
 
-app.use(recordMiddleware);
-app.get('/home', (req, res) => {
+// function recordMiddleware(req, res, next) {
+//     let { url, ip } = req;
+//     fs.appendFileSync(path.resolve(__dirname, './access.log'), `${url}, ${ip}\r\n`);
+//     next();
+// }
+
+// let checkCodeMiddleware = (req, res, next) => {
+//     if (req.query.code === '521') {
+//         next();
+//     } else {
+//         res.send('Error')
+//     }
+// }
+
+
+
+// app.use(recordMiddleware);
+
+
+// app.get('/home',checkCodeMiddleware, (req, res) => {
     
-    res.send('Homepage');
-})
-
-// app.get('/admin', (req, res) => {
-//     res.send('Backend');
+//     res.send('Homepage');
 // })
 
+// // app.get('/admin', (req, res) => {
+// //     res.send('Backend');
+// // })
+// app.get('/admin', checkCodeMiddleware, (req, res) => {
+//     res.send('后台页面');
+// })
+// app.use((req, res) => {
+//     res.status(404).send('<h1>404 Not Found<h1>')
+// })
+// app.listen(3000, () => {
 
-app.get('/admin', checkCodeMiddleware, (req, res) => {
-    res.send('后台页面');
-})
-app.use((req, res) => {
-    res.status(404).send('<h1>404 Not Found<h1>')
-})
-app.listen(3000, () => {
-
-})
+// })
 
 // app.get('/other', (req, res) => {
 //     res.redirect('https://www.baidu.com');
