@@ -12,16 +12,29 @@ function recordMiddleware(req, res, next) {
     next();
 }
 
+let checkCodeMiddleware = (req, res, next) => {
+    if (req.query.code === '521') {
+        next();
+    } else {
+        res.send('Error')
+    }
+}
+
+
 app.use(recordMiddleware);
 app.get('/home', (req, res) => {
     
     res.send('Homepage');
 })
 
-app.get('/admin', (req, res) => {
-    res.send('Backend');
-})
+// app.get('/admin', (req, res) => {
+//     res.send('Backend');
+// })
 
+
+app.get('/admin', checkCodeMiddleware, (req, res) => {
+    res.send('后台页面');
+})
 app.use((req, res) => {
     res.status(404).send('<h1>404 Not Found<h1>')
 })
