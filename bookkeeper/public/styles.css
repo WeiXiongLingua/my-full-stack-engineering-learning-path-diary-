@@ -1,0 +1,9 @@
+.container { max-width: 900px; margin: 24px auto; padding: 0 16px; font-family: Arial; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border-bottom: 1px solid #ddd; padding: 8px; text-align: left; }
+label { display: block; margin-top: 12px; }
+input, select, textarea, button { width: 100%; padding: 8px; margin-top: 6px; }
+button { cursor: pointer; }
+.error { color: #b00020; }
+form[style*='inline'] { width: auto; display: inline; }
+form[style*='inline'] button { width: auto; }

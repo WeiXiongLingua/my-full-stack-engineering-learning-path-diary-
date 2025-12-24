@@ -1,0 +1,29 @@
+<h2>Edit Transaction</h2>
+
+<% if (error) { %>
+  <p class='error'><%= error %></p>
+<% } %>
+
+<form method='post' action='/transactions/<%= item.id %>'>
+  <label>Type</label>
+  <select name='type'>
+    <option value='expense' <%= item.type === 'expense' ? 'selected' : '' %>>expense</option>
+    <option value='income' <%= item.type === 'income' ? 'selected' : '' %>>income</option>
+  </select>
+
+  <label>Amount</label>
+  <input name='amount' value='<%= (item.amount_cents / 100).toFixed(2) %>' />
+
+  <label>Category</label>
+  <input name='category' value='<%= item.category %>' />
+
+  <label>Date</label>
+  <input type='date' name='occurred_on' value='<%= item.occurred_on.toISOString().slice(0, 10) %>' />
+
+  <label>Note</label>
+  <textarea name='note'><%= item.note || '' %></textarea>
+
+  <button type='submit'>Save</button>
+</form>
+
+<p><a href='/transactions'>Back</a></p>

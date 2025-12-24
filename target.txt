@@ -1,5 +1,0 @@
-I am the source file.
-
-Hi, this is an additional message.
-
-Hi, my englihs not good.
