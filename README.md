@@ -1,43 +1,42 @@
-I’m trying to use only English and German so I can improve faster.
+📚 Full-Stack Learning Diary
 
-OK, I ended up at episode 59 today. Big Improvement.
+Tracking my journey to becoming a full-stack developer.
+Focus on consistent progress, real projects, and English / German immersion.
 
-Right now, I am at episode 69. 200 is the end, half way there.
-Come on.
+🗓 Learning Progress
+Day 1
 
-Right now, I am at episode 73. 200 is the end. I am already half way there. Come on.
+Used English & German only to improve faster
 
-Right now, I am at episode 85. 200 is the end. Come on!
+Reached Episode 69 / 200 (halfway)
 
+Big improvement
 
-Right now, I am at episode 102. Half way there. Sehr gut.
+Day 2
 
-Right now, I am at episode 104. I will land a job in the future.
+Progressed from Episode 73 → 105
 
-105. Thanks. Danke.
+Passed the halfway point
 
+Sehr gut.
 
-108. Finally. Record Track.
+Day 3
 
-111. 
+Reached Episode 123
 
-116.
-
-120.
-
-121.
-
-122.
-
-123.
-
-I am build a small project called bookkeeper.
-
-React Tailwindcss Express.js 
-
-I have finished the node.js learning. 
-Now I am moving to express.js, React, postsqlgres.
+New personal record 🚀
 
 
-I am learn React and Next.js
+Day 4
 
+Built a small project: Bookkeeper
+
+Finished Node.js
+
+Started learning:
+
+Express.js
+
+React / Next.js
+
+PostgreSQL
