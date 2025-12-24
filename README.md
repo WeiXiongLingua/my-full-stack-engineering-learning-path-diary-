@@ -32,3 +32,12 @@ Right now, I am at episode 104. I will land a job in the future.
 123.
 
 I am build a small project called bookkeeper.
+
+React Tailwindcss Express.js 
+
+I have finished the node.js learning. 
+Now I am moving to express.js, React, postsqlgres.
+
+
+I am learn React and Next.js
+
